@@ -1,12 +1,41 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#content {
+    position: relative;
+    max-width: 600px;
 }
 #content p {
-    cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    position: relative;
 }
 .comment {
-    margin-left: 20px;
-    color: #555;
+    position: absolute;
+    top: 0;
+    left: 620px; /* Adjust as needed based on your layout */
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     font-style: italic;
+    z-index: 1;
+}
+.comment::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Adjust based on the alignment of the comment box */
+    left: -20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f9f9f9 transparent transparent;
+}
+.comment::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Adjust based on the alignment of the comment box */
+    left: -22px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
 }
