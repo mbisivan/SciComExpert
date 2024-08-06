@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Press release</title>
+    <title>SciComExpert</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="content">
-        <p id="sentence1">For Clear and Credible Science Communication.</p>
-        <div class="comment" data-sentence="sentence1">The title should be short, to the point, and attract readers.</div>
-        
-        <p id="sentence2">DAAD project at Chemnitz University of Technology and the University of Zaragoza researches the language of science communication to improve media competence.</p>
-        <div class="comment" data-sentence="sentence2">The lead summarizes the key message of the press release.</div>
+        <table>
+            <tr>
+                <td class="sentence">
+                   For Clear and Credible Science Communication.
+                </td>
+				
+				<td>
+				 <span class="tooltip-text">&#9666;TITLE</span>
+				</td>
+				
+                <td class="tooltip-column">
+                   <label class="tooltip">[?]<input type="checkbox"><span>Short, to the point, and attractive.</span></label>
+                </td>
+            </tr>
+            <tr>
+                <td class="sentence" id="sentence2">
+                    DAAD project at Chemnitz University of Technology and the University of Zaragoza researches the language of science communication to improve media competence.
+                </td>
+				<td>
+				<span class="tooltip-text">&#9666;LEAD</span>
+				</td>
+                <td class="tooltip-column">
+                    <label class="tooltip">[?]<input type="checkbox"><span>Summarizes the key message of the press release.</span></label>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
     </div>
-	<script src="scripts.js"></script>
 </body>
 </html>

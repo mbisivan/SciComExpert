@@ -1,41 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 20px;
 }
+
 #content {
-    position: relative;
     max-width: 600px;
+    margin: auto;
 }
-#content p {
-    margin-bottom: 20px;
-    position: relative;
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
-.comment {
-    position: absolute;
-    top: 0;
-    left: 620px; /* Adjust as needed based on your layout */
-    width: 200px;
+
+td {
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    font-style: italic;
-    z-index: 1;
+    vertical-align: top;
+    border: none;
 }
-.comment::before {
-    content: '';
-    position: absolute;
-    top: 10px; /* Adjust based on the alignment of the comment box */
-    left: -20px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent #f9f9f9 transparent transparent;
+
+.sentence {
+    padding-right: 40px; /* Ensure space for the tooltip */
 }
-.comment::after {
-    content: '';
+
+.tooltip-column {
+    position: relative;
+    text-align: left; /* Aligns items to the left within the column */
+}
+
+.tooltip-text {
+    display: inline; /* Ensure text stays on the same line as the tooltip */
+    margin-right: 5px; /* Optional: Adds space between text and tooltip */
+    vertical-align: middle; /* Vertically align the text and tooltip */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline; /* Add underline to the tooltip */
+    color: #007BFF; /* Optional: Change color of the tooltip text */
+    vertical-align: middle; /* Vertically align the tooltip with text */
+}
+
+.tooltip input {
+    display: none;
+}
+
+.tooltip span {
+    visibility: hidden;
+    background-color: #feff9c; /* Tooltip background color */
+    color: #000000; /* Tooltip text color */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
     position: absolute;
-    top: 10px; /* Adjust based on the alignment of the comment box */
-    left: -22px;
-    border-width: 10px;
+    z-index: 9;
+    left: 120%; /* Position to the right of the tooltip trigger */
+    top: 50%; /* Center the tooltip vertically relative to the trigger */
+    transform: translateY(-50%); /* Center vertically relative to the trigger */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s;
+    max-width: none; 
+    width: auto; 
+    box-sizing: border-box;
+}
+
+.tooltip span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px; /* Position the arrow pointing to the left */
+    margin-top: -5px;
+    border-width: 5px;
     border-style: solid;
-    border-color: transparent #ccc transparent transparent;
+    border-color: transparent #feff9c transparent transparent; /* Arrow pointing left with the same color as the tooltip background */
+}
+
+.tooltip input:checked + span {
+    visibility: visible;
+    opacity: 1;
 }
