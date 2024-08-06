@@ -1,13 +1,24 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data.json')
-        .then(response => response.json())
+        .then(response => {
+            // Check if the response is OK (status 200-299)
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
             const table = document.getElementById('data-table');
-            
+
+            // Ensure the table exists
+            if (!table) {
+                throw new Error('Table element with ID "data-table" not found.');
+            }
+
             data.forEach(item => {
                 const row = document.createElement('tr');
-                
+
                 // Sentence column
                 const sentenceCell = document.createElement('td');
                 sentenceCell.className = 'sentence';
@@ -18,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const tooltipTextCell = document.createElement('td');
                 const tooltipText = document.createElement('span');
                 tooltipText.className = 'tooltip-text';
-                tooltipText.textContent = `◄ ${item.tooltipText}`;
+                tooltipText.textContent = item.tooltipText; 
                 tooltipTextCell.appendChild(tooltipText);
                 row.appendChild(tooltipTextCell);
 
@@ -28,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const tooltipLabel = document.createElement('label');
                 tooltipLabel.className = 'tooltip';
-                tooltipLabel.textContent = '[?]';
+                tooltipLabel.innerHTML = '[?]'; // Use innerHTML to avoid issues with text content
 
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
