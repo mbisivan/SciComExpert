@@ -8,5 +8,10 @@
         "sentence": "DAAD project at Chemnitz University of Technology and the University of Zaragoza researches the language of science communication to improve media competence.",
         "tooltipText": "LEAD",
         "tooltipContent": "Summarizes the key message of the press release."
+    },
+	{
+        "sentence": "'Science communication is based on trust in science. However, with the advent of accessible generative AI tools such as ChatGPT, anyone can create credible-sounding texts and simulate expertise - with potentially harmful consequences', says Marina Ivanova, researcher at the Chair of English and Digital Linguistics at Chemnitz University of Technology.",
+        "tooltipText": "QUOTE",
+        "tooltipContent": "Introduction to the issue."
     }
 ]
