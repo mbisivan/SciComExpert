@@ -15,4 +15,4 @@ Examples of X posts and press releases with different overall communicative purp
 - Press release to announce and promote a new publication
 - Press release to report on an academic event and promote its results
 
-The documents were created by the participants of the Autumn School "I, Expert" at the University of Zaragoza (19-21.11.2024). The Twitter/X post layout was created using TweetGen (https://www.tweetgen.com/).
+The documents were created by the participants of the Autumn School "I, Expert" at the University of Zaragoza (19-21.11.2024). The Twitter/X post layout was created using TweetGen ([https://www.tweetgen.com/](https://www.tweetgen.com/)).
