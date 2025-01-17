@@ -10,7 +10,7 @@ Examples of X posts and press releases with different overall communicative purp
 
 - X posts to announce and promote a new publication of a member of a research project
 - X posts establishing networks by providing information on a specific academic event
-- X posts announcing and describing an event
+- X posts on a research/cooperation project
 - X posts in individual accounts announcing research undertaken or published.
 - Press release to announce and promote a new publication
 - Press release to report on an academic event and promote its results
